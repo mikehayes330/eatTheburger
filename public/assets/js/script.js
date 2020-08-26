@@ -1,11 +1,11 @@
-$(".create-form").on("submit", function(event) {
+$("#submitbtn").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-
+    console.log("hello it worked")
     var newBurger = {
-      name: $("#burgerName").val().trim(),
+      name: $("#burger_name").val().trim(),
     };
-
+    console.log(newBurger)
     // Send the POST request.
     $.ajax("/api/burgers", {
       type: "POST",
@@ -18,3 +18,5 @@ $(".create-form").on("submit", function(event) {
       }
     );
   });
+
+

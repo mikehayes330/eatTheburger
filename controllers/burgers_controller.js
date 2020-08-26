@@ -8,9 +8,11 @@ router.get("/", function (req, res) {
     var burgerData = {
       burgers: data,
     };
-    console.log(burgerData);
+    console.log(req);
     res.render("index", burgerData);
   });
+
+ 
 });
 
 router.post("/api/burgers", function (req, res) {
