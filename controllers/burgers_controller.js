@@ -5,11 +5,11 @@ var burger = require("../models/burger.js");
 // Router
 router.get("/", function (req, res) {
   burger.all(function (data) {
-    var burgerData = {
+    var hbsObject = {
       burgers: data,
     };
     console.log(req);
-    res.render("index", burgerData);
+    res.render("index", hbsObject);
   });
 
  
