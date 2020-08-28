@@ -1,9 +1,13 @@
-<li>
+<li class="list-group-item">
+	
+	<span>
+		<img id="hamburgerImg" src="/assets/img/hamburger.png" alt="hamburger clip-art">
+	</span>
 	{{burger_name}}
 
-	<button class="change-devoured" data-id="{{id}}" data-newBurger="{{devoured}}">
+	<button class="change-devoured btn btn-warning" data-id="{{id}}" data-newBurger="{{devoured}}">
 		{{#if devoured}}Eat it{{else}}Remake this burger{{/if}}
 	</button>
 
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+	<button class="delete-burger btn btn-danger" data-id="{{this.id}}">DELETE!</button>
 </li>
